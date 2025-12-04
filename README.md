@@ -14,7 +14,7 @@ This project is a backend focused application designed to demonstrate object-ori
 
 ## Installation and Setup
 1. Clone the repository:
-   git clone (Git Repo)[https://github.com/merialea-sys/bookstore-application]
+   git clone [https://github.com/merialea-sys/bookstore-application](Git Repo)
    cd bookstore-application
 2. Setup vitual environment
    run pipenv install
