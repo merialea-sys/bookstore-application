@@ -35,9 +35,9 @@ def remove_book():
     remove_book_name = input("Enter the name of the book to remove: ")
     if book := Book.find_by_title(remove_book_name):
         book.delete()
-        print(f"Author {remove_book_name} removed successfully.")
+        print(f"Book {remove_book_name} removed successfully.")
     else:
-        print(f"Author {remove_book_name} not found.")
+        print(f"Book {remove_book_name} not found.")
 
 
 def display_authors():
