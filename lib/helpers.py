@@ -33,7 +33,7 @@ def add_book():
 
 def remove_book():
     remove_book_name = input("Enter the name of the book to remove: ")
-    if book := Book.find_by_name(remove_book_name):
+    if book := Book.find_by_title(remove_book_name):
         book.delete()
         print(f"Author {remove_book_name} removed successfully.")
     else:
