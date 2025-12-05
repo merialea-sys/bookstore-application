@@ -32,12 +32,13 @@ def add_book():
         print(f"Error adding book: {e}")
 
 def remove_book():
-    remove_book_title = input("Enter the title of the book to remove: ")
-    try:
-        Book.delete(remove_book_title)
-        print(f"Book '{remove_book_title}' removed successfully.")
-    except Exception as exc:
-        print(f"Error removing book: {exc}")
+    remove_book_name = input("Enter the name of the book to remove: ")
+    if book := Book.find_by_name(remove_book_name):
+        book.delete()
+        print(f"Author {remove_book_name} removed successfully.")
+    else:
+        print(f"Author {remove_book_name} not found.")
+
 
 def display_authors():
     authors = Author.get_all()
